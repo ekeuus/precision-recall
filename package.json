@@ -1,0 +1,32 @@
+{
+  "name": "percision-recall",
+  "version": "1.0.0",
+  "description": "JS percision, recall and F1 calculation library",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src --presets babel-preset-env --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekeuus/percision-recall.git"
+  },
+  "keywords": [
+    "json",
+    "percision",
+    "recall",
+    "F1",
+    "test"
+  ],
+  "author": "Ekke Uustalu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekeuus/percision-recall/issues"
+  },
+  "homepage": "https://github.com/ekeuus/percision-recall#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
