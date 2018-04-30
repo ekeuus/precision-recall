@@ -21,11 +21,11 @@ const calculator = (relevantStrings, retrievedStrings) => {
 
 	const relevantAndRetrieved = [...uniqueRelevant].filter(x => retrievedSet.has(x));
 
-	const percision = relevantAndRetrieved.length / uniqueRetrieved.length;
+	const precision = relevantAndRetrieved.length / uniqueRetrieved.length;
 	const recall = relevantAndRetrieved.length / uniqueRelevant.length;
-	const f = 2 * (percision * recall) / (percision + recall);
+	const f = 2 * (precision * recall) / (precision + recall);
 	return {
-        percision,
+        precision,
         recall,
         f,
 	};
