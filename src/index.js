@@ -1,5 +1,5 @@
 const defaultValues = {
-	percision: 0,
+	precision: 0,
 	recall: 0,
 	f: 0,
 };
