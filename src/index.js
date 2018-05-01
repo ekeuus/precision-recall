@@ -19,10 +19,14 @@ const calculator = (relevantStrings, retrievedStrings) => {
 	const retrievedSet = new Set(retrievedStrings);
 	const uniqueRetrieved = Array.from(retrievedSet);
 
-	const relevantAndRetrieved = [...uniqueRelevant].filter(x => retrievedSet.has(x));
+	const intersection = uniqueRelevant.filter(x => retrievedSet.has(x));
 
-	const precision = relevantAndRetrieved.length / uniqueRetrieved.length;
-	const recall = relevantAndRetrieved.length / uniqueRelevant.length;
+	if (!intersection || intersection.length === 0) {
+		return defaultValues;
+	}
+
+	const precision = intersection.length / uniqueRetrieved.length;
+	const recall = intersection.length / uniqueRelevant.length;
 	const f = 2 * (precision * recall) / (precision + recall);
 	return {
         precision,

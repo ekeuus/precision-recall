@@ -1,6 +1,6 @@
 {
   "name": "precision-recall",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JS percision, recall and F1 calculation library",
   "main": "./dist/index.js",
   "scripts": {
